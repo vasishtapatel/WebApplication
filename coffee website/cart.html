@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+        transition: all 0.2s linear;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        min-height: 100vh;
+        background: #000000;
+      }
+
+      .container form {
+        padding: 20px;
+        margin-top: 130px;
+        width: 700px;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .container form .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .container form .row .col {
+        flex: 1 1 250px;
+      }
+
+      .container form .row .col .title {
+        font-size: 20px;
+        color: #333;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      .container form .row .col .inputBox {
+        margin: 15px 0;
+      }
+
+      .container form .row .col .inputBox span {
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .container form .row .col .inputBox input {
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        font-size: 15px;
+        text-transform: none;
+      }
+
+      .container form .row .col .inputBox input:focus {
+        border: 1px solid #000;
+      }
+
+      .container form .row .col .flex {
+        display: flex;
+        gap: 15px;
+      }
+
+      .container form .row .col .flex .inputBox {
+        margin-top: 5px;
+      }
+
+      .container form .row .col .inputBox img {
+        height: 34px;
+        margin-top: 5px;
+        filter: drop-shadow(0 0 1px #000);
+      }
+
+      .container form .btn {
+        width: 50%;
+        padding: -25px;
+        font-size: 17px;
+
+        background: #d3ad7f;
+        color: #fff;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+
+      .container form .btn:hover {
+        background: #513928;
+      }
+
+      .container .btn {
+        height: 50px;
+
+        position: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        action="file:///C:/Users/vasishta%20patel/Desktop/coffee%20website/paymentdone.html"
+      >
+        <div class="row">
+          <div class="col">
+            <h3 class="title">billing address</h3>
+            <i class="bi bi-building"></i>
+
+            <div class="inputBox">
+              <span>full name :</span>
+              <input required type="text" placeholder="name" />
+            </div>
+            <div class="inputBox">
+              <span>email :</span>
+              <input type="email" placeholder="example@example.com" />
+            </div>
+            <div class="inputBox">
+              <span>address :</span>
+              <input required type="text" placeholder="" />
+            </div>
+            <div class="inputBox">
+              <span>city :</span>
+              <input required type="text" placeholder="Hyderabad" />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>state :</span>
+                <input required type="text" placeholder="" />
+              </div>
+              <div class="inputBox">
+                <span>zip code :</span>
+                <input required maxlength="6" type="number" placeholder="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3 class="title">payment</h3>
+            <i class="bi bi-credit-card-fill"></i>
+
+            <div class="inputBox">
+              <span>cards accepted :</span>
+              <img src="images/card_img.png" alt="" />
+            </div>
+            <div class="inputBox">
+              <span>name on card :</span>
+              <input required type="text" placeholder="mr. Vasishta" />
+            </div>
+            <div class="inputBox">
+              <span>credit card number :</span>
+              <input required type="number" placeholder="0000-0000-0000-0000" />
+            </div>
+            <div id="expmonth" class="inputBox">
+              <span>exp month :</span>
+              <input required type="text" placeholder="" />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>exp year :</span>
+                <input required type="number" placeholder="2022" />
+              </div>
+              <div class="inputBox">
+                <span>CVV :</span>
+                <input required maxlength="3" type="number" placeholder="***" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<input type="submit" value="proceed to checkout" class="submit-btn" /> -->
+        <input type="submit" value="proceed to checkout" class="btn" />
+      </form>
+    </div>
+  </body>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="" />
+    </a>
+
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#menu">menu</a>
+      <a href="#products">products</a>
+
+      <a href="#review">review</a>
+      <a href="#contact">contact</a>
+      <a href="#blogs">blogs</a>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here..." />
+      <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    <div class="cart-items-container">
+      <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="images/cart-item-1.png" alt="" />
+        <div class="content">
+          <h3>cart item 01</h3>
+          <div class="price">$15.99/-</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="images/cart-item-2.png" alt="" />
+        <div class="content">
+          <h3>cart item 02</h3>
+          <div class="price">$15.99/-</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="images/cart-item-3.png" alt="" />
+        <div class="content">
+          <h3>cart item 03</h3>
+          <div class="price">$15.99/-</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="images/cart-item-4.png" alt="" />
+        <div class="content">
+          <h3>cart item 04</h3>
+          <div class="price">$15.99/-</div>
+        </div>
+      </div>
+      <a
+        href="file:///C:/Users/vasishta%20patel/Desktop/coffee%20website/cart.html"
+        class="btn"
+        >checkout now</a
+      >
+    </div>
+  </header>
+</html>

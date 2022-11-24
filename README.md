@@ -1,2 +1,2 @@
 # WebApplication
-HTML,CSS,JavaScript
+Coffee Website HTML,CSS,JavaScript
